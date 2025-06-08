@@ -44,3 +44,19 @@
 [2025-06-08 22:38:19] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
 [2025-06-08 22:38:19] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
 [2025-06-08 22:38:19] Conversion complete. 0 file(s) converted.
+[2025-06-08 23:09:35] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 23:09:35] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 23:09:35] Conversion complete. 0 file(s) converted.
+[2025-06-08 23:09:44] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 23:09:44] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 23:09:44] Conversion complete. 0 file(s) converted.
+[2025-06-08 23:09:49] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic
+[2025-06-08 23:09:49] Converting /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg...
+[2025-06-08 23:09:50] Successfully converted /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg. Deleting original.
+[2025-06-08 23:09:50] Conversion complete. 1 file(s) converted.
+[2025-06-08 23:09:51] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg
+[2025-06-08 23:09:51] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg
+[2025-06-08 23:09:51] Conversion complete. 0 file(s) converted.
+[2025-06-08 23:09:55] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg
+[2025-06-08 23:09:55] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg
+[2025-06-08 23:09:55] Conversion complete. 0 file(s) converted.

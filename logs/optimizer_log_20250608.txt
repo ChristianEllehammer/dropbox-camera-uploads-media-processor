@@ -125,3 +125,58 @@
 [2025-06-08 22:38:36] [INFO] Warnings: 0
 [2025-06-08 22:38:36] [INFO] Errors: 1
 [2025-06-08 22:38:36] [INFO] === Script finished ===
+[2025-06-08 23:09:44] [INFO] === Script started ===
+[2025-06-08 23:09:44] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 23:09:44] [WARNING] Skipping non-image file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 23:09:44] [INFO] === Processing Summary ===
+[2025-06-08 23:09:44] [INFO] Total files processed: 0
+[2025-06-08 23:09:44] [INFO] Files skipped: 1
+[2025-06-08 23:09:44] [INFO] Warnings: 1
+[2025-06-08 23:09:44] [INFO] Errors: 0
+[2025-06-08 23:09:44] [INFO] === Script finished ===
+[2025-06-08 23:09:50] [INFO] === Script started ===
+[2025-06-08 23:09:50] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic
+[2025-06-08 23:09:50] [ERROR] File does not exist: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic
+[2025-06-08 23:09:50] [INFO] === Processing Summary ===
+[2025-06-08 23:09:50] [INFO] Total files processed: 0
+[2025-06-08 23:09:50] [INFO] Files skipped: 0
+[2025-06-08 23:09:50] [INFO] Warnings: 0
+[2025-06-08 23:09:50] [INFO] Errors: 1
+[2025-06-08 23:09:50] [INFO] === Script finished ===
+[2025-06-08 23:09:51] [INFO] === Script started ===
+[2025-06-08 23:09:51] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg
+[2025-06-08 23:09:52] [INFO] Optimizing /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg with ImageOptim...
+[2025-06-08 23:09:56] [INFO] === Script started ===
+[2025-06-08 23:09:56] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg
+[2025-06-08 23:09:56] [INFO] Optimizing /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg with ImageOptim...
+[2025-06-08 23:10:01] [INFO] Optimization details for /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg:
+[2025-06-08 23:10:01] [INFO]   Original size: 6.0 MB (6338888 bytes)
+[2025-06-08 23:10:01] [INFO]   New size:      778.4 KB (797121 bytes)
+[2025-06-08 23:10:01] [INFO]   Space saved:   5.3 MB (5541767 bytes) (87.4%)
+[2025-06-08 23:10:01] [INFO]   (Original: 6338888 bytes, New: 797121 bytes, Saved: 5541767 bytes)
+[2025-06-08 23:10:01] [INFO] === Processing Summary ===
+[2025-06-08 23:10:01] [INFO] Total files processed: 1
+[2025-06-08 23:10:01] [INFO] Files skipped: 0
+[2025-06-08 23:10:01] [INFO] Warnings: 0
+[2025-06-08 23:10:01] [INFO] Errors: 0
+[2025-06-08 23:10:01] [INFO] === Script finished ===
+[2025-06-08 23:10:02] [INFO] === Script started ===
+[2025-06-08 23:10:02] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 23:10:02] [ERROR] File does not exist: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 23:10:02] [INFO] === Processing Summary ===
+[2025-06-08 23:10:02] [INFO] Total files processed: 0
+[2025-06-08 23:10:02] [INFO] Files skipped: 0
+[2025-06-08 23:10:02] [INFO] Warnings: 0
+[2025-06-08 23:10:02] [INFO] Errors: 1
+[2025-06-08 23:10:02] [INFO] === Script finished ===
+[2025-06-08 23:10:03] [INFO] Optimization details for /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg:
+[2025-06-08 23:10:04] [INFO]   Original size: 7.0 MB (7296359 bytes)
+[2025-06-08 23:10:04] [INFO]   New size:      918.4 KB (940475 bytes)
+[2025-06-08 23:10:04] [INFO]   Space saved:   6.1 MB (6355884 bytes) (87.1%)
+[2025-06-08 23:10:04] [INFO]   (Original: 7296359 bytes, New: 940475 bytes, Saved: 6355884 bytes)
+[2025-06-08 23:10:04] [INFO] === Processing Summary ===
+[2025-06-08 23:10:04] [INFO] Total files processed: 1
+[2025-06-08 23:10:04] [INFO] Files skipped: 0
+[2025-06-08 23:10:04] [INFO] Warnings: 0
+[2025-06-08 23:10:04] [INFO] Errors: 0
+[2025-06-08 23:10:04] [INFO] === Script finished ===

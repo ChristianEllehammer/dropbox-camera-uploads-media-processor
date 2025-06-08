@@ -21,6 +21,21 @@ This project automates the processing, optimization, and organization of media f
    - Place media files in your Camera Uploads folder. The scripts will process, optimize, and organize them automatically.
    - Check the `logs/` directory for detailed logs of all actions.
 
+## Tips & Examples
+- **Testing the Workflow:**
+  - Place a test file (e.g., a HEIC image or MOV video) in your Camera Uploads folder.
+  - The scripts will automatically convert HEIC to JPG, encode MOV to MP4, and organize the files.
+  - Check the logs in `logs/` to see detailed actions, e.g.:
+    ```
+    [2025-06-08 22:28:53] Successfully encoded /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+    [2025-06-08 22:28:53] Original size: 14.81MB
+    [2025-06-08 22:28:53] New size: 8.35MB
+    [2025-06-08 22:28:53] Space saved: 6.46MB (40.0%)
+    ```
+- **Troubleshooting:**
+  - If a file is skipped, check the logs for messages like "Skipping non-video file" or "File not found."
+  - Ensure HandBrakeCLI and ImageMagick are installed and accessible.
+
 ## Configuration
 - **Script paths:** By default, scripts use absolute paths. If you want to use different folders, update the `SCRIPT_DIR` and related variables at the top of each script.
 - **Do not change core logic** unless you know what you're doing. Only edit config files and variables marked for user configuration.
