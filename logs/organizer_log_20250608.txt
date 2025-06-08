@@ -151,3 +151,31 @@
 [2025-06-08 22:28:53] [INFO] Warnings: 1
 [2025-06-08 22:28:53] [INFO] Errors: 0
 [2025-06-08 22:28:53] [INFO] === Script finished ===
+[2025-06-08 22:38:20] [INFO] === Script started ===
+[2025-06-08 22:38:20] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:38:20] [WARNING] Unsupported file type: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:38:20] [INFO] === Processing Summary ===
+[2025-06-08 22:38:20] [INFO] Total files processed: 0
+[2025-06-08 22:38:20] [INFO] Files skipped: 1
+[2025-06-08 22:38:20] [INFO] Warnings: 1
+[2025-06-08 22:38:20] [INFO] Errors: 0
+[2025-06-08 22:38:20] [INFO] === Script finished ===
+[2025-06-08 22:38:36] [INFO] === Script started ===
+[2025-06-08 22:38:36] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:38:36] [INFO] Moving /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4 to /Users/christian/Dropbox/Billeder/Personlig/År/2025/2025-07/2025-07 - Blandet/Videoer
+[2025-06-08 22:38:36] [INFO] Successfully moved /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4 to /Users/christian/Dropbox/Billeder/Personlig/År/2025/2025-07/2025-07 - Blandet/Videoer
+[2025-06-08 22:38:36] [INFO] === Processing Summary ===
+[2025-06-08 22:38:36] [INFO] Total files processed: 1
+[2025-06-08 22:38:36] [INFO] Files skipped: 0
+[2025-06-08 22:38:36] [INFO] Warnings: 0
+[2025-06-08 22:38:36] [INFO] Errors: 0
+[2025-06-08 22:38:36] [INFO] === Script finished ===
+[2025-06-08 22:38:36] [INFO] === Script started ===
+[2025-06-08 22:38:36] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:38:36] [WARNING] File not found: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:38:36] [INFO] === Processing Summary ===
+[2025-06-08 22:38:36] [INFO] Total files processed: 0
+[2025-06-08 22:38:36] [INFO] Files skipped: 1
+[2025-06-08 22:38:36] [INFO] Warnings: 1
+[2025-06-08 22:38:36] [INFO] Errors: 0
+[2025-06-08 22:38:36] [INFO] === Script finished ===

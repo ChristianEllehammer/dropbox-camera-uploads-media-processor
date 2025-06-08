@@ -45,3 +45,15 @@
 [2025-06-08 22:28:53] Space saved: 6.46MB (40.0%)
 [2025-06-08 22:28:53] Deleted original file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
 [2025-06-08 22:28:53] Encoding complete. 1 file(s) encoded.
+[2025-06-08 22:38:12] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:38:12] Encoding /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp...
+[2025-06-08 22:38:19] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:38:19] Skipping non-video file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:38:19] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:38:36] Moved /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4 (finalized)
+[2025-06-08 22:38:36] Successfully encoded /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:38:36] Original size: 14.81MB
+[2025-06-08 22:38:36] New size: 8.35MB
+[2025-06-08 22:38:36] Space saved: 6.46MB (40.0%)
+[2025-06-08 22:38:36] Deleted original file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:38:36] Encoding complete. 1 file(s) encoded.

@@ -1,95 +1,69 @@
-# Dropbox Camera Uploads Optimizer and Organizer
+# Media Processor Project
 
-This folder action automatically optimizes and organizes photos and videos uploaded to your Dropbox Camera Uploads folder.
+This project automates the processing, optimization, and organization of media files (images and videos) in your Dropbox Camera Uploads folder. It is designed for robust, efficient, and transparent operation, with clear logging and modular scripts.
 
-## Overview
+## Features
+- **Image Conversion:** Converts HEIC images to JPG.
+- **Image Processing:** Optimizes images for size and quality.
+- **Video Processing:** Encodes videos (e.g., MOV to MP4) using HandBrakeCLI with high-quality settings.
+- **File Organization:** Moves processed files into a structured directory based on type and date.
+- **Comprehensive Logging:** All scripts log their actions, errors, and results to dated log files in the `logs/` directory.
+- **Monthly Reports:** Python script to generate and email monthly reports with statistics and visualizations.
 
-The system consists of three main components:
-1. **Image Optimizer**: Compresses images using ImageOptim CLI while maintaining quality
-2. **Organizer**: Sorts files into a structured folder hierarchy based on date
-3. **Folder Action**: Triggers the process when new files are added to the Camera Uploads folder
+## Logging
+- Each script uses a simple, robust logging function that writes timestamped messages to a log file in the `logs/` directory.
+- Log files are named by script and date, e.g., `video_encoder_log_YYYYMMDD.txt`.
+- Logs include start/end of processing, errors, file moves, and space savings.
+- Example log entry:
+  ```
+  [2025-06-08 22:28:53] Successfully encoded /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+  ```
+
+## Modularity
+- Each script is responsible for a single task (conversion, processing, organization).
+- Functions are used for repeated logic (e.g., logging).
+- Scripts can be run independently or coordinated via the main `Media Processor.sh` script.
+
+## Performance
+- Scripts process files in a loop, handling only valid files.
+- For most workflows, this is efficient and safe. For very large batches, consider parallelization (not enabled by default for safety).
+
+## Version Control with Git
+- The project is under Git version control. To use Git effectively:
+  - **Commit after each major change:**
+    ```
+    git add .
+    git commit -m "Describe your change"
+    ```
+  - **Check status:**
+    ```
+    git status
+    ```
+  - **View history:**
+    ```
+    git log --oneline
+    ```
+  - **Create branches for experiments:**
+    ```
+    git checkout -b feature/my-feature
+    ```
+- This ensures you can always revert to a previous working state and track all changes.
 
 ## Requirements
-
-- macOS
-- ImageOptim CLI (`brew install imageoptim-cli`)
-- Dropbox account with Camera Uploads enabled
-- Folder Actions enabled in macOS
-
-## Installation
-
-1. Clone or download this repository to your local machine
-2. Install ImageOptim CLI:
-   ```bash
-   brew install imageoptim-cli
-   ```
-3. Make the scripts executable:
-   ```bash
-   chmod +x "Image Optimizer.sh" "Organizer.sh" "Image Optimizer and Organizer.sh"
-   ```
-4. Set up the folder action:
-   - Right-click on your Dropbox Camera Uploads folder
-   - Select "Folder Actions Setup..."
-   - Click "+" and select your Camera Uploads folder
-   - Click "Attach a Script"
-   - Select "Image Optimizer and Organizer.scpt"
-   - Ensure "Enable Folder Actions" is checked
-
-## Configuration
-
-### Logging
-- Log files are stored in the `logs` directory
-- Log rotation is set to 30 days by default
-- Log levels: DEBUG, INFO, WARNING, ERROR
-- Default level: INFO
-
-### File Organization
-- Photos are moved to: `Dropbox/Billeder/Personlig/År/[YEAR]/[YEAR]-[MONTH]/[YEAR]-[MONTH] - Blandet/Billeder`
-- Videos are moved to: `Dropbox/Billeder/Personlig/År/[YEAR]/[YEAR]-[MONTH]/[YEAR]-[MONTH] - Blandet/Videoer`
-
-### Supported File Types
-- Images: jpg, jpeg, png, gif, heic, heif, webp, tiff, tif
-- Videos: mp4, mov, avi, m4v
+- Bash (macOS default)
+- [HandBrakeCLI](https://handbrake.fr/) for video encoding
+- [ImageMagick](https://imagemagick.org/) for image conversion
+- [pandas](https://pandas.pydata.org/) and [matplotlib](https://matplotlib.org/) for report generation (Python)
 
 ## Usage
-
-The system runs automatically when new files are added to your Dropbox Camera Uploads folder. Each file is:
-1. Optimized (if it's an image)
-2. Moved to the appropriate folder based on its date and type
-
-## Monitoring and Reports
-
-Monthly reports are generated and sent via email, including:
-- Number of files processed
-- Total space saved
-- Average optimization percentage
-- Common errors or warnings
-- Performance metrics
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Scripts not running**
-   - Check if Folder Actions are enabled
-   - Verify script permissions
-   - Check log files for errors
-
-2. **Files not being optimized**
-   - Ensure ImageOptim CLI is installed
-   - Check if the file type is supported
-   - Verify log files for specific errors
-
-3. **Files not being organized**
-   - Check if the filename contains a valid date (YYYY-MM format)
-   - Verify destination folders exist
-   - Check log files for specific errors
-
-### Log Files
-
-- Optimizer logs: `logs/optimize_log_YYYYMMDD.txt`
-- Organizer logs: `logs/move_log_YYYYMMDD.txt`
+- Place media files in your Dropbox Camera Uploads folder.
+- The scripts will process, optimize, and organize them automatically.
+- Check the `logs/` directory for detailed logs of all actions.
+- Use `generate_report.py` to create monthly reports.
 
 ## Contributing
+- Please use feature branches and submit pull requests for review.
+- Keep scripts modular and logging consistent.
 
-Feel free to submit issues and enhancement requests! 
+## License
+MIT License 

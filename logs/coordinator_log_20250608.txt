@@ -1416,3 +1416,354 @@ HandBrake has exited.
 [2025-06-08 22:28:53] Running Image Processor...
 [2025-06-08 22:28:53] Running File Organizer...
 [2025-06-08 22:28:53] Script completed successfully
+[2025-06-08 22:34:41] Script started with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:34:41] Running Image Converter...
+[2025-06-08 22:34:42] Running Video Processor...
+/Users/christian/Dropbox/Dokumenter/Computer/Scripts and Apps/Automator/Folder Actions/Dropbox - Camera Uploads/Video Processor.sh: line 9: logger.py: No such file or directory
+[2025-06-08 22:34:42] ERROR: Video Processor failed
+[2025-06-08 22:38:12] Script started with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:38:12] Running Image Converter...
+[2025-06-08 22:38:12] Running Video Processor...
+[22:38:12] Compile-time hardening features are enabled
+[22:38:12] hb_init: starting libhb thread
+[22:38:12] thread 16bb33000 started ("libhb")
+HandBrake 1.9.2 (2025022300) - Darwin arm64 - https://handbrake.fr
+8 CPUs detected
+Opening /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov...
+[22:38:12] CPU: Apple M3
+[22:38:12]  - logical processor count: 8
+[22:38:12] hb_scan: path=/Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov, title_index=1
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    creation_time   : 2025-06-08T15:00:31.000000Z
+    com.apple.quicktime.location.accuracy.horizontal: 17.779372
+    com.apple.quicktime.full-frame-rate-playback-intent: 0
+    com.apple.quicktime.location.ISO6709: +55.6182+012.3350+011.489/
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iPhone 16 Pro
+    com.apple.quicktime.software: 18.5
+    com.apple.quicktime.creationdate: 2025-06-08T17:00:30+0200
+  Duration: 00:00:11.90, start: 0.000000, bitrate: 10443 kb/s
+  Stream #0:0[0x1](und): Video: hevc (Main) (hvc1 / 0x31637668), yuv420p(tv, bt709), 1920x1080, 9820 kb/s, 29.99 fps, 29.97 tbr, 600 tbn (default)
+      Metadata:
+        creation_time   : 2025-06-08T15:00:31.000000Z
+        handler_name    : Core Media Video
+        vendor_id       : [0][0][0][0]
+        encoder         : HEVC
+      Side data:
+        displaymatrix: rotation of -90.00 degrees
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        creation_time   : 2025-06-08T15:00:31.000000Z
+        handler_name    : Core Media Audio
+        vendor_id       : [0][0][0][0]
+  Stream #0:2[0x3](und): Audio: none (apac / 0x63617061), 48000 Hz, 4 channels, 399 kb/s
+      Metadata:
+        creation_time   : 2025-06-08T15:00:31.000000Z
+        handler_name    : Core Media Audio
+        vendor_id       : [0][0][0][0]
+      Side data:
+        unknown side data type 9 (4 bytes)
+  Stream #0:3[0x4](und): Data: none (mebx / 0x7862656D), 0 kb/s (default)
+      Metadata:
+        creation_time   : 2025-06-08T15:00:31.000000Z
+        handler_name    : Core Media Metadata
+  Stream #0:4[0x5](und): Data: none (mebx / 0x7862656D), 0 kb/s (default)
+      Metadata:
+        creation_time   : 2025-06-08T15:00:31.000000Z
+        handler_name    : Core Media Metadata
+  Stream #0:5[0x6](und): Data: none (mebx / 0x7862656D), 14 kb/s (default)
+      Metadata:
+        creation_time   : 2025-06-08T15:00:31.000000Z
+        handler_name    : Core Media Metadata
+  Stream #0:6[0x7](und): Data: none (mebx / 0x7862656D), 46 kb/s (default)
+      Metadata:
+        creation_time   : 2025-06-08T15:00:31.000000Z
+        handler_name    : Core Media Metadata
+  Stream #0:7[0x8](und): Data: none (mebx / 0x7862656D), 0 kb/s (default)
+      Metadata:
+        creation_time   : 2025-06-08T15:00:31.000000Z
+        handler_name    : Core Media Metadata
+[22:38:12] scan: decoding previews for title 1
+[22:38:12] Auto-Rotating video 270 degrees
+Scanning title 1 of 1, preview 1, 10.00 %[22:38:12] scan: audio 0x1: aac, rate=48000Hz, bitrate=128248 Unknown (AAC LC, 2.0 ch, 128 kbps)
+Scanning title 1 of 1, preview 3, 30.00 %Scanning title 1 of 1, preview 5, 50.00 %Scanning title 1 of 1, preview 7, 70.00 %Scanning title 1 of 1, preview 9, 90.00 %[22:38:13] scan: 10 previews, 1080x1920, 29.992 fps, autocrop = 0/0/0/0, aspect 1:1.78, PAR 1:1, color profile: 1-1-1, chroma location: left
+[22:38:13] libhb: scan thread found 1 valid title(s)
++ Using preset: HQ 1080p30 Surround
++ title 1:
+  + stream: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+  + duration: 00:00:11
+  + size: 1080x1920, pixel aspect: 1/1, display aspect: 0.56, 29.992 fps
+  + autocrop: 0/0/0/0
+  + chapters:
+    + 1: duration 00:00:11
+  + audio tracks:
+    + 1, Unknown (AAC LC, 2.0 ch, 128 kbps) (iso639-2: und)
+  + subtitle tracks:
+[22:38:13] Starting work at: Sun Jun  8 22:38:13 2025
+
+[22:38:13] 1 job(s) to process
+[22:38:13] json job:
+{
+    "Audio": {
+        "AudioList": [
+            {
+                "Bitrate": 160,
+                "CompressionLevel": -1.0,
+                "DRC": 0.0,
+                "DitherMethod": "auto",
+                "Encoder": "ca_aac",
+                "Gain": 0.0,
+                "Mixdown": "stereo",
+                "NormalizeMixLevel": false,
+                "PresetEncoder": "ca_aac",
+                "Quality": -3.0,
+                "Samplerate": 0,
+                "Track": 0
+            },
+            {
+                "Bitrate": 640,
+                "CompressionLevel": -1.0,
+                "DRC": 0.0,
+                "DitherMethod": "auto",
+                "Encoder": "ac3",
+                "Gain": 0.0,
+                "Mixdown": "stereo",
+                "NormalizeMixLevel": false,
+                "PresetEncoder": "copy:ac3",
+                "Quality": -3.0,
+                "Samplerate": 0,
+                "Track": 0
+            }
+        ],
+        "CopyMask": [
+            "copy:aac",
+            "copy:ac3"
+        ],
+        "FallbackEncoder": "ca_aac"
+    },
+    "Destination": {
+        "AlignAVStart": true,
+        "ChapterList": [
+            {
+                "Duration": {
+                    "Hours": 0,
+                    "Minutes": 0,
+                    "Seconds": 11,
+                    "Ticks": 1071299
+                },
+                "Name": ""
+            }
+        ],
+        "ChapterMarkers": false,
+        "File": "/Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp",
+        "InlineParameterSets": false,
+        "Mux": "m4v",
+        "Options": {
+            "IpodAtom": false,
+            "Optimize": true
+        }
+    },
+    "Filters": {
+        "FilterList": [
+            {
+                "ID": 4,
+                "Settings": {
+                    "block-height": "16",
+                    "block-thresh": "40",
+                    "block-width": "16",
+                    "filter-mode": "2",
+                    "mode": "3",
+                    "motion-thresh": "1",
+                    "spatial-metric": "2",
+                    "spatial-thresh": "1"
+                }
+            },
+            {
+                "ID": 6,
+                "Settings": {
+                    "mode": "7"
+                }
+            },
+            {
+                "ID": 11,
+                "Settings": {
+                    "mode": 2,
+                    "rate": "27000000/900000"
+                }
+            },
+            {
+                "ID": 20,
+                "Settings": {
+                    "crop-bottom": 0,
+                    "crop-left": 0,
+                    "crop-right": 0,
+                    "crop-top": 0,
+                    "height": 1080,
+                    "width": 1080
+                }
+            }
+        ]
+    },
+    "Metadata": {},
+    "PAR": {
+        "Den": 16,
+        "Num": 9
+    },
+    "SequenceID": 0,
+    "Source": {
+        "Angle": 0,
+        "HWDecode": 0,
+        "KeepDuplicateTitles": false,
+        "Path": "/Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov",
+        "Range": {
+            "End": 1,
+            "Start": 1,
+            "Type": "chapter"
+        },
+        "Title": 1
+    },
+    "Subtitle": {
+        "Search": {
+            "Burn": true,
+            "Default": false,
+            "Enable": false,
+            "Forced": false
+        },
+        "SubtitleList": []
+    },
+    "Video": {
+        "ChromaLocation": 1,
+        "ColorInputFormat": 0,
+        "ColorMatrix": 1,
+        "ColorOutputFormat": 0,
+        "ColorPrimaries": 1,
+        "ColorRange": 1,
+        "ColorTransfer": 1,
+        "Encoder": "x264",
+        "HardwareDecode": 0,
+        "Level": "4.0",
+        "MultiPass": false,
+        "Options": "",
+        "Preset": "slow",
+        "Profile": "high",
+        "QSV": {
+            "AdapterIndex": 0,
+            "AsyncDepth": 0,
+            "Decode": false
+        },
+        "Quality": 20.0,
+        "Tune": "",
+        "Turbo": false
+    }
+}
+[22:38:13] Starting Task: Encoding Pass
+[22:38:13] job configuration:
+[22:38:13]  * source
+[22:38:13]    + /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[22:38:13]    + title 1, chapter(s) 1 to 1
+[22:38:13]    + container: mov,mp4,m4a,3gp,3g2,mj2
+[22:38:13]    + data rate: 10443 kbps
+[22:38:13]  * destination
+[22:38:13]    + /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[22:38:13]    + container: MPEG-4 (libavformat)
+[22:38:13]      + optimized for HTTP streaming (fast start)
+[22:38:13]      + align initial A/V stream timestamps
+[22:38:13]  * video track
+[22:38:13]    + decoder: hevc 8-bit (yuv420p)
+[22:38:13]      + bitrate 9820 kbps
+[22:38:13]    + filters
+[22:38:13]      + Comb Detect (mode=3:spatial-metric=2:motion-thresh=1:spatial-thresh=1:filter-mode=2:block-thresh=40:block-width=16:block-height=16)
+[22:38:13]      + Decomb (mode=39)
+[22:38:13]      + Framerate Shaper (mode=2:rate=27000000/900000)
+[22:38:13]        + frame rate: 29.992 fps -> peak rate limited to 30.000 fps
+[22:38:13]      + Crop and Scale (width=1080:height=1080:crop-top=0:crop-bottom=0:crop-left=0:crop-right=0)
+[22:38:13]        + source: 1080 * 1920, crop (0/0/0/0): 1080 * 1920, scale: 1080 * 1080
+[22:38:13]    + Output geometry
+[22:38:13]      + storage dimensions: 1080 x 1080
+[22:38:13]      + pixel aspect ratio: 9 : 16
+[22:38:13]      + display dimensions: 607 x 1080
+[22:38:13]    + encoder: H.264 (libx264)
+[22:38:13]      + preset:  slow
+[22:38:13]      + profile: high
+[22:38:13]      + level:   4.0
+[22:38:13]      + quality: 20.00 (RF)
+[22:38:13]      + color profile: 1-1-1
+[22:38:13]      + color range: tv
+[22:38:13]      + chroma location: left
+[22:38:13]  * audio track 1
+[22:38:13]    + decoder: Unknown (AAC LC, 2.0 ch, 128 kbps) (track 1, id 0x1)
+[22:38:13]      + bitrate: 128 kbps, samplerate: 48000 Hz
+[22:38:13]    + mixdown: Stereo
+[22:38:13]    + encoder: AAC (Apple AudioToolbox)
+[22:38:13]      + bitrate: 160 kbps, samplerate: 48000 Hz
+[22:38:13]  * audio track 2
+[22:38:13]    + decoder: Unknown (AAC LC, 2.0 ch, 128 kbps) (track 1, id 0x1)
+[22:38:13]      + bitrate: 128 kbps, samplerate: 48000 Hz
+[22:38:13]    + mixdown: Stereo
+[22:38:13]    + encoder: AC3 (libavcodec)
+[22:38:13]      + bitrate: 640 kbps, samplerate: 48000 Hz
+[22:38:13] sync: expecting 356 video frames
+[22:38:13] encx264: min-keyint: 30, keyint: 300
+[22:38:13] encx264: encoding at constant RF 20.000000
+[22:38:13] encx264: unparsed options: level=4.0:ref=5:direct=auto:subme=8:trellis=2:vbv-bufsize=31250:vbv-maxrate=25000:rc-lookahead=50
+x264 [info]: using SAR=9/16
+x264 [info]: using cpu capabilities: ARMv8 NEON
+x264 [info]: profile High, level 4.0, 4:2:0, 8-bit
+[22:38:13] Auto-Rotating video 270 degrees
+[22:38:14] sync: first pts video is 0
+[22:38:14] sync: Chapter 1 at frame 1 time 0
+[22:38:14] sync: first pts audio 0x1 is 0
+[22:38:14] sync: first pts audio 0x1 is 0
+[2025-06-08 22:38:19] Script started with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:38:19] Running Image Converter...
+[2025-06-08 22:38:19] Running Video Processor...
+[2025-06-08 22:38:19] Running Image Processor...
+[2025-06-08 22:38:19] Running File Organizer...
+[2025-06-08 22:38:20] Script completed successfully
+[22:38:30] reader: done. 1 scr changes
+[22:38:36] work: average encoding speed for job is 19.925440 fps
+[22:38:36] comb detect: heavy 0 | light 3 | uncombed 354 | total 357
+[22:38:36] decomb: deinterlaced 0 | blended 3 | unfiltered 354 | total 357
+[22:38:36] vfr: 357 frames output, 0 dropped and 0 duped for CFR/PFR
+[22:38:36] vfr: lost time: 0 (0 frames)
+[22:38:36] vfr: gained time: 0 (0 frames) (0 not accounted for)
+[22:38:36] aac-decoder done: 558 frames, 0 decoder errors
+[22:38:36] aac-decoder done: 558 frames, 0 decoder errors
+[22:38:36] hevc-decoder done: 357 frames, 0 decoder errors
+[22:38:36] sync: got 357 frames, 356 expected
+[22:38:36] sync: framerate min 29.992 fps, max 29.992 fps, avg 29.992 fps
+x264 [info]: frame I:2     Avg QP:19.52  size:134214
+x264 [info]: frame P:90    Avg QP:21.00  size: 48670
+x264 [info]: frame B:265   Avg QP:24.31  size: 10941
+x264 [info]: consecutive B-frames:  0.8%  0.6%  0.0% 98.6%
+x264 [info]: mb I  I16..4: 12.6% 65.4% 22.0%
+x264 [info]: mb P  I16..4:  7.0% 16.1%  1.3%  P16..4: 41.3% 19.4% 11.4%  0.0%  0.0%    skip: 3.4%
+x264 [info]: mb B  I16..4:  1.2%  2.3%  0.2%  B16..8: 39.4%  6.4%  1.2%  direct: 7.4%  skip:41.8%  L0:41.3% L1:47.6% BI:11.1%
+x264 [info]: 8x8 transform intra:64.5% inter:70.5%
+x264 [info]: direct mvs  spatial:97.7% temporal:2.3%
+x264 [info]: coded y,uvDC,uvAC intra: 50.1% 63.1% 15.3% inter: 22.4% 31.5% 2.0%
+x264 [info]: i16 v,h,dc,p: 10% 27%  6% 57%
+x264 [info]: i8 v,h,dc,ddl,ddr,vr,hd,vl,hu:  9% 19% 12%  8% 10%  9% 14%  7% 14%
+x264 [info]: i4 v,h,dc,ddl,ddr,vr,hd,vl,hu:  9% 21%  8%  6% 11%  9% 14%  7% 14%
+x264 [info]: i8c dc,h,v,p: 39% 41% 12%  8%
+x264 [info]: Weighted P-Frames: Y:5.6% UV:0.0%
+x264 [info]: ref P L0: 50.5% 15.9% 16.8%  9.0%  7.7%  0.2%
+x264 [info]: ref B L0: 81.0% 12.2%  4.8%  2.1%
+x264 [info]: ref B L1: 93.5%  6.5%
+x264 [info]: kb/s:5072.95
+[22:38:36] mux: track 0, 357 frames, 7548033 bytes, 5058.72 kbps, fifo 512
+[22:38:36] mux: track 1, 561 frames, 241440 bytes, 161.81 kbps, fifo 1024
+[22:38:36] mux: track 2, 372 frames, 952320 bytes, 638.25 kbps, fifo 512
+[22:38:36] Finished work at: Sun Jun  8 22:38:36 2025
+
+[22:38:36] libhb: work result = 0
+
+Encode done!
+HandBrake has exited.
+[2025-06-08 22:38:36] Running Image Processor...
+[2025-06-08 22:38:36] Running File Organizer...
+[2025-06-08 22:38:36] Script completed successfully

@@ -107,3 +107,21 @@
 [2025-06-08 22:28:53] [INFO] Warnings: 0
 [2025-06-08 22:28:53] [INFO] Errors: 1
 [2025-06-08 22:28:53] [INFO] === Script finished ===
+[2025-06-08 22:38:19] [INFO] === Script started ===
+[2025-06-08 22:38:19] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:38:19] [WARNING] Skipping non-image file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:38:19] [INFO] === Processing Summary ===
+[2025-06-08 22:38:19] [INFO] Total files processed: 0
+[2025-06-08 22:38:19] [INFO] Files skipped: 1
+[2025-06-08 22:38:19] [INFO] Warnings: 1
+[2025-06-08 22:38:19] [INFO] Errors: 0
+[2025-06-08 22:38:19] [INFO] === Script finished ===
+[2025-06-08 22:38:36] [INFO] === Script started ===
+[2025-06-08 22:38:36] [INFO] Processing files: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:38:36] [ERROR] File does not exist: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:38:36] [INFO] === Processing Summary ===
+[2025-06-08 22:38:36] [INFO] Total files processed: 0
+[2025-06-08 22:38:36] [INFO] Files skipped: 0
+[2025-06-08 22:38:36] [INFO] Warnings: 0
+[2025-06-08 22:38:36] [INFO] Errors: 1
+[2025-06-08 22:38:36] [INFO] === Script finished ===

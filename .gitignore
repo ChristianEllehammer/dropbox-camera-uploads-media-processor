@@ -1,0 +1,21 @@
+# Logs
+logs/
+
+# Reports
+reports/
+
+# macOS system files
+.DS_Store
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/ 
