@@ -2,6 +2,40 @@
 
 This project automates the processing, optimization, and organization of media files (images and videos) in your Dropbox Camera Uploads folder. It is designed for robust, efficient, and transparent operation, with clear logging and modular scripts.
 
+## Quick Start
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/ChristianEllehammer/dropbox-camera-uploads-media-processor.git
+   cd dropbox-camera-uploads-media-processor
+   ```
+2. **Install requirements:**
+   - macOS: Install [HandBrakeCLI](https://handbrake.fr/) and [ImageMagick](https://imagemagick.org/)
+     ```
+     brew install handbrake imagemagick
+     ```
+   - Python dependencies:
+     ```
+     pip install -r requirements.txt
+     ```
+3. **Copy and configure settings:**
+   - For email reports, copy the example config and fill in your details:
+     ```
+     cp email_config.example.json email_config.json
+     # Edit email_config.json with your email, app password, and recipient
+     ```
+   - (Optional) If you want to change base folders or tool paths, edit the relevant variables at the top of each script.
+4. **Set up Dropbox Camera Uploads folder and Folder Actions (macOS):**
+   - Attach the `Media Processor.scpt` as a Folder Action to your Camera Uploads folder.
+5. **Run and monitor:**
+   - Place media files in your Camera Uploads folder. The scripts will process, optimize, and organize them automatically.
+   - Check the `logs/` directory for detailed logs of all actions.
+   - Use `generate_report.py` to create monthly reports.
+
+## Configuration
+- **email_config.json:** Required for email reports. Never commit this file to GitHub.
+- **Script paths:** By default, scripts use absolute paths. If you want to use different folders, update the `SCRIPT_DIR` and related variables at the top of each script.
+- **Do not change core logic** unless you know what you're doing. Only edit config files and variables marked for user configuration.
+
 ## Features
 - **Image Conversion:** Converts HEIC images to JPG.
 - **Image Processing:** Optimizes images for size and quality.
