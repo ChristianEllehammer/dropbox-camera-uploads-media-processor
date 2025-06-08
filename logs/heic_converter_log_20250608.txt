@@ -1,0 +1,37 @@
+[2025-06-08 22:21:22] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic
+[2025-06-08 22:21:22] Converting /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg...
+[2025-06-08 22:21:23] Successfully converted /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg. Deleting original.
+[2025-06-08 22:21:23] Conversion complete. 1 file(s) converted.
+[2025-06-08 22:21:28] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg
+[2025-06-08 22:21:28] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg
+[2025-06-08 22:21:28] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:21:32] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg
+[2025-06-08 22:21:32] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg
+[2025-06-08 22:21:32] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:21:36] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:21:36] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:21:36] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:23:42] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:23:42] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:23:42] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:24:18] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:24:18] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:24:18] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:24:50] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:24:50] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:24:50] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:24:57] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:24:57] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:24:57] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:26:48] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:26:48] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:26:48] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:26:55] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:26:55] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:26:55] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:28:30] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:28:30] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:28:30] Conversion complete. 0 file(s) converted.
+[2025-06-08 22:28:37] Starting HEIC conversion with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:28:37] Skipping non-HEIC file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:28:37] Conversion complete. 0 file(s) converted.

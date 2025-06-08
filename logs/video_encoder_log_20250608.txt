@@ -1,0 +1,47 @@
+[2025-06-08 22:21:23] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic
+[2025-06-08 22:21:23] ERROR: File not found: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.heic
+[2025-06-08 22:21:23] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:21:28] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg
+[2025-06-08 22:21:28] Skipping non-video file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.36.jpg
+[2025-06-08 22:21:28] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:21:32] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg
+[2025-06-08 22:21:32] Skipping non-video file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.40.34.jpg
+[2025-06-08 22:21:32] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:21:36] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:21:36] Encoding /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4...
+[2025-06-08 22:23:42] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:23:42] Skipping already encoded MP4 file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:23:42] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:24:12] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:24:12] Encoding /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4...
+[2025-06-08 22:24:18] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:24:18] Skipping already encoded MP4 file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:24:18] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:24:19] ERROR: Failed to encode /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:24:19] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:24:50] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:24:50] Encoding /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4...
+[2025-06-08 22:24:57] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:24:57] Skipping already encoded MP4 file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:24:57] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:25:12] ERROR: Failed to encode /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:25:12] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:26:48] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:26:48] Encoding /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4...
+[2025-06-08 22:26:55] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:26:55] Skipping already encoded MP4 file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4
+[2025-06-08 22:26:55] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:27:11] ERROR: Failed to encode /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:27:11] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:28:30] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:28:30] Encoding /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp...
+[2025-06-08 22:28:37] Starting video encoding with 1 arguments: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:28:37] Skipping non-video file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp
+[2025-06-08 22:28:37] Encoding complete. 0 file(s) encoded.
+[2025-06-08 22:28:53] Moved /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4.tmp to /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mp4 (finalized)
+[2025-06-08 22:28:53] Successfully encoded /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:28:53] Original size: 14.81MB
+[2025-06-08 22:28:53] New size: 8.35MB
+[2025-06-08 22:28:53] Space saved: 6.46MB (40.0%)
+[2025-06-08 22:28:53] Deleted original file: /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
+[2025-06-08 22:28:53] Encoding complete. 1 file(s) encoded.
