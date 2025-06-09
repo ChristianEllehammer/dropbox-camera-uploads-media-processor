@@ -3,23 +3,27 @@
 # Encodes videos to H.264 MP4 format using HandBrakeCLI
 # Optimized for iPhone videos with various resolutions and framerates
 
-set -e
+set -euo pipefail
 
 # Source configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/config.sh"
 
 # Set up logging
-LOG_DIR="$SCRIPT_DIR/logs"
 LOG_FILE="$LOG_DIR/video_encoder_log_$(date +%Y%m%d).txt"
 mkdir -p "$LOG_DIR"
 
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] === Script started ===" >> "$LOG_FILE"
+# Function to log messages
+log() {
+    local level="${1:-INFO}"
+    local message="${2:-}"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $message" | tee -a "$LOG_FILE"
+}
 
 # Check if HandBrakeCLI is installed
 if [ ! -f "$HANDBRAKE" ]; then
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERROR: HandBrakeCLI not found at $HANDBRAKE" >> "$LOG_FILE"
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Please install HandBrakeCLI with: brew install handbrake" >> "$LOG_FILE"
+    log "ERROR" "HandBrakeCLI not found at $HANDBRAKE"
+    log "ERROR" "Please install HandBrakeCLI with: brew install handbrake"
     exit 1
 fi
 
@@ -29,11 +33,13 @@ skipped=0
 warnings=0
 errors=0
 
+log "INFO" "=== Script started ==="
+
 # Process each file
 for f in "$@"; do
     # Only process MOV files
     if [[ $f =~ \.(mov|MOV)$ ]]; then
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Processing video: $f" >> "$LOG_FILE"
+        log "INFO" "Processing video: $f"
         
         # Get original size
         original_size=$(du -h "$f" | cut -f1)
@@ -57,42 +63,42 @@ for f in "$@"; do
             if [ -f "$output_file" ] && [ -s "$output_file" ]; then
                 # Delete original MOV file
                 if rm -f "$f"; then
-                    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Successfully encoded $f" >> "$LOG_FILE"
-                    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Original size: $original_size" >> "$LOG_FILE"
-                    echo "[$(date '+%Y-%m-%d %H:%M:%S')] New size: $new_size" >> "$LOG_FILE"
-                    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Space saved: ${saved_mb}MB (${saved_percent}%)" >> "$LOG_FILE"
-                    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Deleted original file: $f" >> "$LOG_FILE"
+                    log "INFO" "Successfully encoded $f"
+                    log "INFO" "Original size: $original_size"
+                    log "INFO" "New size: $new_size"
+                    log "INFO" "Space saved: ${saved_mb}MB (${saved_percent}%)"
+                    log "INFO" "Deleted original file: $f"
                     ((processed++))
                 else
-                    echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERROR: Failed to delete original file: $f" >> "$LOG_FILE"
+                    log "ERROR" "Failed to delete original file: $f"
                     # Clean up the output file since we couldn't delete the original
                     rm -f "$output_file"
                     ((errors++))
                 fi
             else
-                echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERROR: Output file is missing or empty: $output_file" >> "$LOG_FILE"
+                log "ERROR" "Output file is missing or empty: $output_file"
                 rm -f "$output_file"
                 ((errors++))
             fi
         else
             # Clean up output file if encoding failed
             [ -f "$output_file" ] && rm -f "$output_file"
-            echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERROR: Failed to encode $f" >> "$LOG_FILE"
+            log "ERROR" "Failed to encode $f"
             ((errors++))
         fi
     else
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Skipping non-MOV file: $f" >> "$LOG_FILE"
+        log "INFO" "Skipping non-MOV file: $f"
         ((skipped++))
     fi
 done
 
 # Log summary
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] === Processing Summary ===" >> "$LOG_FILE"
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Total videos processed: $processed" >> "$LOG_FILE"
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Files skipped: $skipped" >> "$LOG_FILE"
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Warnings: $warnings" >> "$LOG_FILE"
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Errors: $errors" >> "$LOG_FILE"
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] === Script finished ===" >> "$LOG_FILE"
+log "INFO" "=== Processing Summary ==="
+log "INFO" "Total videos processed: $processed"
+log "INFO" "Files skipped: $skipped"
+log "INFO" "Warnings: $warnings"
+log "INFO" "Errors: $errors"
+log "INFO" "=== Script finished ==="
 
 # Exit with error if any errors occurred
 if [ $errors -gt 0 ]; then

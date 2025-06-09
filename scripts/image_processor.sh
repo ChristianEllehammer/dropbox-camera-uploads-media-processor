@@ -1,6 +1,6 @@
 #!/bin/bash
 # Image Processor.sh
-# Optimizes images using ImageMagick
+# Optimizes images using ImageOptim-CLI
 
 set -euo pipefail
 
@@ -19,10 +19,9 @@ log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $message" | tee -a "$LOG_FILE"
 }
 
-# Check if ImageMagick is installed
-if ! command -v "$IMAGEMAGICK" &> /dev/null; then
-    log "ERROR" "ImageMagick not found at $IMAGEMAGICK"
-    log "ERROR" "Please install ImageMagick using: brew install imagemagick"
+# Check if imageoptim is installed
+if ! command -v "imageoptim" &> /dev/null; then
+    log "ERROR" "ImageOptim-CLI not found. Please install it: brew install imageoptim-cli"
     exit 1
 fi
 
@@ -37,8 +36,9 @@ log "INFO" "=== Script started ==="
 # Process all image files in the directory
 for f in "$@"; do
     if [ ! -f "$f" ]; then
-        log "WARNING" "File not found: $f"
+        log "ERROR" "File not found: $f"
         ((total_warnings++))
+        ((total_skipped++))
         continue
     fi
 
@@ -59,14 +59,11 @@ for f in "$@"; do
     original_size=$(du -h "$f" | cut -f1)
     original_bytes=$(stat -f%z "$f")
     
-    # Create temporary file
-    temp_file="${f}.temp"
-    
-    # Optimize the image using ImageMagick
-    if "$IMAGEMAGICK" "$f" -strip -quality "$IMAGE_QUALITY" "$temp_file" 2>> "$LOG_FILE"; then
+    # Optimize the image using ImageOptim-CLI
+    if imageoptim "$f" -S --no-color 2>> "$LOG_FILE"; then
         # Get new file size
-        new_size=$(du -h "$temp_file" | cut -f1)
-        new_bytes=$(stat -f%z "$temp_file")
+        new_size=$(du -h "$f" | cut -f1)
+        new_bytes=$(stat -f%z "$f")
         
         # Calculate space saved
         space_saved=$((original_bytes - new_bytes))
@@ -78,9 +75,6 @@ for f in "$@"; do
             percent_saved="0.00"
         fi
         
-        # Replace original with optimized version
-        mv "$temp_file" "$f"
-        
         log "INFO" "Successfully optimized $f"
         log "INFO" "Original size: $original_size"
         log "INFO" "New size: $new_size"
@@ -88,7 +82,6 @@ for f in "$@"; do
         ((total_processed++))
     else
         log "ERROR" "Failed to optimize $f"
-        rm -f "$temp_file"
         ((total_errors++))
     fi
 done
