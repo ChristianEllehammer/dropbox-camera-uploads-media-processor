@@ -3,11 +3,14 @@
 # Enable case-insensitive matching
 shopt -s nocasematch
 
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Source the centralized config file
+source "$SCRIPT_DIR/config.sh"
+
 # Logging configuration
-LOG_DIR="/Users/christian/Dropbox/Dokumenter/Computer/Scripts and Apps/Automator/Folder Actions/Dropbox - Camera Uploads/logs"
 LOG_FILE="$LOG_DIR/organizer_log_$(date +%Y%m%d).txt"
-MAX_LOG_DAYS=30  # Keep logs for 30 days
-LOG_LEVEL="INFO"  # Can be DEBUG, INFO, WARNING, ERROR
 
 # Create logs directory if it doesn't exist
 mkdir -p "$LOG_DIR"
@@ -59,9 +62,6 @@ rotate_logs
 log "INFO" "=== Script started ==="
 log "INFO" "Processing files: $@"
 
-# Base directory for organized files
-BASE_DIR="/Users/christian/Dropbox/Billeder/Personlig/År"
-
 for f in "$@"; do
     DEST=""
 
@@ -74,7 +74,7 @@ for f in "$@"; do
     fi
 
     # Extract the year and month from the filename using regex
-    if [[ $f =~ ([0-9]{4})-([0-9]{2}) ]]; then
+    if [[ $f =~ ([0-9]{4})-([0-9]{2})-([0-9]{2}) ]]; then
         year="${BASH_REMATCH[1]}"
         month="${BASH_REMATCH[2]}"
         

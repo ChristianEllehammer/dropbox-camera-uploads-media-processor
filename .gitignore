@@ -1,11 +1,12 @@
+# macOS system files
+.DS_Store
+
 # Logs
+debug.log
 logs/
 
 # Reports
 reports/
-
-# macOS system files
-.DS_Store
 
 # Python cache files
 __pycache__/

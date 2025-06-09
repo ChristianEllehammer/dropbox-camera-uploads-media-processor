@@ -1,95 +1,134 @@
-# Media Processor Project
+# Dropbox Camera Uploads Media Processor
 
-This project automates the processing, optimization, and organization of media files (images and videos) in your Dropbox Camera Uploads folder. It is designed for robust, efficient, and transparent operation, with clear logging and modular scripts.
+This project provides a set of scripts to automatically process media files uploaded to your Dropbox Camera Uploads folder. It handles:
+- Converting HEIC photos to JPG
+- Optimizing JPG images (with configurable quality and no resizing by default)
+- Converting MOV videos to MP4
+- Organizing files into a structured folder system based on date
 
-## Quick Start
-1. **Clone the repository:**
+## Prerequisites
+
+- macOS (tested on macOS Sonoma)
+- Dropbox installed and configured
+- Required tools:
+  - HandBrakeCLI (for video conversion)
+  - ImageOptim (for image optimization)
+  - ImageMagick (for HEIC conversion)
+
+## Installation
+
+1. Clone this repository to your local machine
+2. Install required tools:
+   ```bash
+   brew install handbrake imagemagick
+   brew install --cask imageoptim
    ```
-   git clone https://github.com/ChristianEllehammer/dropbox-camera-uploads-media-processor.git
-   cd dropbox-camera-uploads-media-processor
+3. Make all scripts executable:
+   ```bash
+   chmod +x scripts/*.sh
    ```
-2. **Install requirements:**
-   - macOS: Install [HandBrakeCLI](https://handbrake.fr/) and [ImageMagick](https://imagemagick.org/)
-     ```
-     brew install handbrake imagemagick
-     ```
-3. **Configure settings:**
-   - (Optional) If you want to change base folders or tool paths, edit the relevant variables at the top of each script.
-4. **Set up Dropbox Camera Uploads folder and Folder Actions (macOS):**
-   - Attach the `Media Processor.scpt` as a Folder Action to your Camera Uploads folder.
-5. **Run and monitor:**
-   - Place media files in your Camera Uploads folder. The scripts will process, optimize, and organize them automatically.
-   - Check the `logs/` directory for detailed logs of all actions.
+4. Configure the `config.sh` file with your paths and preferences.
 
-## Tips & Examples
-- **Testing the Workflow:**
-  - Place a test file (e.g., a HEIC image or MOV video) in your Camera Uploads folder.
-  - The scripts will automatically convert HEIC to JPG, encode MOV to MP4, and organize the files.
-  - Check the logs in `logs/` to see detailed actions, e.g.:
-    ```
-    [2025-06-08 22:28:53] Successfully encoded /Users/christian/Dropbox/Camera Uploads/2025-07-08 17.00.30.mov
-    [2025-06-08 22:28:53] Original size: 14.81MB
-    [2025-06-08 22:28:53] New size: 8.35MB
-    [2025-06-08 22:28:53] Space saved: 6.46MB (40.0%)
-    ```
-- **Troubleshooting:**
-  - If a file is skipped, check the logs for messages like "Skipping non-video file" or "File not found."
-  - Ensure HandBrakeCLI and ImageMagick are installed and accessible.
+## Project Structure
 
-## Configuration
-- **Script paths:** By default, scripts use absolute paths. If you want to use different folders, update the `SCRIPT_DIR` and related variables at the top of each script.
-- **Do not change core logic** unless you know what you're doing. Only edit config files and variables marked for user configuration.
+```
+.
+├── scripts/
+│   ├── clean_logs.sh
+│   ├── config.sh
+│   ├── file_organizer.sh
+│   ├── image_converter.sh
+│   ├── image_processor.sh
+│   ├── media_processor.sh
+│   ├── video_processor.sh
+│   └── test_workflow.sh
+├── logs/
+├── test_files/
+├── README.md
+├── .gitignore
+```
 
-## Features
-- **Image Conversion:** Converts HEIC images to JPG.
-- **Image Processing:** Optimizes images for size and quality.
-- **Video Processing:** Encodes videos (e.g., MOV to MP4) using HandBrakeCLI with high-quality settings.
-- **File Organization:** Moves processed files into a structured directory based on type and date.
-- **Comprehensive Logging:** All scripts log their actions, errors, and results to dated log files in the `logs/` directory.
+## Usage
 
-## Logging
-- Each script uses a simple, robust logging function that writes timestamped messages to a log file in the `logs/` directory.
-- Log files are named by script and date, e.g., `video_encoder_log_YYYYMMDD.txt`.
-- Logs include start/end of processing, errors, file moves, and space savings.
+- All scripts are now in the `scripts/` directory.
+- Main entry point: `scripts/media_processor.sh`
+- Test workflow: `scripts/test_workflow.sh`
+- Clean logs: `scripts/clean_logs.sh`
 
-## Modularity
-- Each script is responsible for a single task (conversion, processing, organization).
-- Functions are used for repeated logic (e.g., logging).
-- Scripts can be run independently or coordinated via the main `Media Processor.sh` script.
+### Example
 
-## Performance
-- Scripts process files in a loop, handling only valid files.
-- For most workflows, this is efficient and safe. For very large batches, consider parallelization (not enabled by default for safety).
+```bash
+# Process files
+./scripts/media_processor.sh /path/to/file1.heic /path/to/file2.mov
 
-## Version Control with Git
-- The project is under Git version control. To use Git effectively:
-  - **Commit after each major change:**
-    ```
-    git add .
-    git commit -m "Describe your change"
-    ```
-  - **Check status:**
-    ```
-    git status
-    ```
-  - **View history:**
-    ```
-    git log --oneline
-    ```
-  - **Create branches for experiments:**
-    ```
-    git checkout -b feature/my-feature
-    ```
-- This ensures you can always revert to a previous working state and track all changes.
+# Run the test suite
+./scripts/test_workflow.sh
 
-## Requirements
-- Bash (macOS default)
-- [HandBrakeCLI](https://handbrake.fr/) for video encoding
-- [ImageMagick](https://imagemagick.org/) for image conversion
+# Clean old logs
+./scripts/clean_logs.sh
+```
 
-## Contributing
-- Please use feature branches and submit pull requests for review.
-- Keep scripts modular and logging consistent.
+## Logs
 
-## License
-MIT License 
+All operations are logged in the `logs/` directory:
+- `media_processor_log_YYYYMMDD.txt`: Main workflow logs
+- `image_converter_log_YYYYMMDD.txt`: HEIC conversion logs
+- `image_processor_log_YYYYMMDD.txt`: JPG optimization logs
+- `video_encoder_log_YYYYMMDD.txt`: Video conversion logs
+- `organizer_log_YYYYMMDD.txt`: File organization logs
+
+## Testing
+
+The project includes a test script to validate the entire workflow:
+
+```bash
+./scripts/test_workflow.sh
+```
+
+This will:
+1. Create test files (HEIC, JPG, MOV)
+2. Run each processing step
+3. Verify the results
+4. Clean up test files
+
+The test script will show:
+- ✓ Green checkmarks for passed tests
+- ✗ Red X marks for failed tests
+- Detailed error messages for any failures
+
+## Recent Improvements
+
+This project has undergone several improvements to enhance stability and functionality:
+
+- **Removed Locking Mechanism:** The redundant file locking mechanism has been completely removed, simplifying the codebase as processing is inherently sequential.
+- **Accurate File Organization:** The file organizer script now correctly extracts dates from filenames in the "YYYY-MM-DD HH.MM.SS" format, ensuring accurate file placement.
+- **Configurable Image Quality:** Image processing now defaults to 100% quality for JPGs, and the `IMAGE_MAX_WIDTH` setting has been removed, preserving original image dimensions by default. These settings are configurable in `config.sh`.
+- **Centralized Logging:** All processing and organization logs are now consistently stored in the main `logs/` directory, improving log management and debugging.
+- **Robust Error Handling:** Enhanced error reporting in individual scripts ensures that issues with non-existent or invalid files are clearly identified and reported during testing and operation.
+
+## Troubleshooting
+
+### Common Issues
+
+1. **HEIC files not converting:**
+   - Check if ImageMagick is installed: `which magick`
+   - Verify HEIC support: `magick identify -list format | grep HEIC`
+
+2. **JPG files not optimizing:**
+   - Check if ImageOptim is installed: `ls /Applications/ImageOptim.app`
+   - Try running ImageOptim manually on a test file
+
+3. **MOV files not converting:**
+   - Check if HandBrakeCLI is installed: `which HandBrakeCLI`
+   - Verify video codec support: `HandBrakeCLI --version`
+
+4. **Files not being organized:**
+   - Check if the base directory exists: `ls "$BASE_DIR"`
+   - Verify file permissions: `ls -l "$BASE_DIR"`
+
+### Running Tests
+
+To run the test suite:
+```bash
+./scripts/test_workflow.sh
+```
