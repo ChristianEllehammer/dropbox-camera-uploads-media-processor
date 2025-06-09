@@ -2,7 +2,7 @@
 
 This project provides a set of scripts to automatically process media files uploaded to your Dropbox Camera Uploads folder. It handles:
 - Converting HEIC photos to JPG
-- Optimizing JPG images (with configurable quality and no resizing by default, using ImageOptim-CLI for best results)
+- Optimizing JPG images (with configurable quality and no resizing by default, using ImageMagick for best results)
 - Converting MOV videos to MP4
 - Organizing files into a structured folder system based on date
 
@@ -12,9 +12,7 @@ This project provides a set of scripts to automatically process media files uplo
 - Dropbox installed and configured
 - Required tools:
   - HandBrakeCLI (for video conversion)
-  - ImageOptim (for image optimization)
-  - ImageMagick (for HEIC conversion)
-  - ImageOptim-CLI (for image optimization)
+  - ImageMagick (for image optimization and HEIC conversion)
 
 ## Installation
 
@@ -22,8 +20,6 @@ This project provides a set of scripts to automatically process media files uplo
 2. Install required tools:
    ```bash
    brew install handbrake imagemagick
-   brew install imageoptim-cli
-   brew install --cask imageoptim
    ```
 3. Make all scripts executable:
    ```bash
@@ -102,9 +98,9 @@ The test script will show:
 
 This project has undergone several improvements to enhance stability and functionality:
 
+- **Simplified Image Processing:** The image processor now uses ImageMagick with minimal processing to preserve original image quality and colors. The quality setting is configurable in `config.sh` (default: 85).
 - **Removed Locking Mechanism:** The redundant file locking mechanism has been completely removed, simplifying the codebase as processing is inherently sequential.
 - **Accurate File Organization:** The file organizer script now correctly extracts dates from filenames in the "YYYY-MM-DD HH.MM.SS" format, ensuring accurate file placement.
-- **Configurable Image Quality:** Image processing now defaults to 100% quality for JPGs, and the `IMAGE_MAX_WIDTH` setting has been removed, preserving original image dimensions by default. These settings are configurable in `config.sh`. Image optimization is now handled by ImageOptim-CLI for potentially better results.
 - **Centralized Logging:** All processing and organization logs are now consistently stored in the main `logs/` directory, improving log management and debugging.
 - **Robust Error Handling:** Enhanced error reporting in individual scripts ensures that issues with non-existent or invalid files are clearly identified and reported during testing and operation.
 
@@ -117,9 +113,9 @@ This project has undergone several improvements to enhance stability and functio
    - Verify HEIC support: `magick identify -list format | grep HEIC`
 
 2. **JPG files not optimizing:**
-   - Check if ImageOptim.app is installed: `ls /Applications/ImageOptim.app`
-   - Check if ImageOptim-CLI is installed: `which imageoptim`
-   - Try running `imageoptim` manually on a test file (e.g., `imageoptim test.jpg`)
+   - Check if ImageMagick is installed: `which magick`
+   - Verify image quality settings in `config.sh`
+   - Try running `magick convert` manually on a test file
 
 3. **MOV files not converting:**
    - Check if HandBrakeCLI is installed: `which HandBrakeCLI`

@@ -1,6 +1,6 @@
 #!/bin/bash
 # Image Processor.sh
-# Optimizes images using ImageOptim-CLI
+# Optimizes images using ImageMagick with minimal processing
 
 set -euo pipefail
 
@@ -19,9 +19,9 @@ log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $message" | tee -a "$LOG_FILE"
 }
 
-# Check if imageoptim is installed
-if ! command -v "imageoptim" &> /dev/null; then
-    log "ERROR" "ImageOptim-CLI not found. Please install it: brew install imageoptim-cli"
+# Check if ImageMagick is installed
+if ! command -v "$IMAGEMAGICK" &> /dev/null; then
+    log "ERROR" "ImageMagick not found. Please install it: brew install imagemagick"
     exit 1
 fi
 
@@ -32,6 +32,7 @@ total_warnings=0
 total_errors=0
 
 log "INFO" "=== Script started ==="
+log "INFO" "Using image quality setting: $IMAGE_QUALITY"
 
 # Process all image files in the directory
 for f in "$@"; do
@@ -59,31 +60,49 @@ for f in "$@"; do
     original_size=$(du -h "$f" | cut -f1)
     original_bytes=$(stat -f%z "$f")
     
-    # Optimize the image using ImageOptim-CLI
-    if imageoptim "$f" -S --no-color 2>> "$LOG_FILE"; then
-        # Get new file size
-        new_size=$(du -h "$f" | cut -f1)
-        new_bytes=$(stat -f%z "$f")
-        
-        # Calculate space saved
-        space_saved=$((original_bytes - new_bytes))
-        if [ "$original_bytes" -gt 0 ]; then
-            space_saved_mb=$(echo "scale=2; $space_saved / 1048576" | bc)
-            percent_saved=$(echo "scale=2; ($space_saved * 100) / $original_bytes" | bc)
+    # Create a temporary file for processing
+    temp_file="${f%.*}_temp.${extension_lower}"
+    
+    # Optimize the image using ImageMagick with minimal processing
+    if [[ "$extension_lower" =~ ^(jpg|jpeg)$ ]]; then
+        if "$IMAGEMAGICK" convert "$f" -quality "$IMAGE_QUALITY" "$temp_file" 2>> "$LOG_FILE"; then
+            mv "$temp_file" "$f"
         else
-            space_saved_mb="0.00"
-            percent_saved="0.00"
+            log "ERROR" "Failed to optimize JPEG: $f"
+            rm -f "$temp_file"
+            ((total_errors++))
+            continue
         fi
-        
-        log "INFO" "Successfully optimized $f"
-        log "INFO" "Original size: $original_size"
-        log "INFO" "New size: $new_size"
-        log "INFO" "Space saved: ${space_saved_mb}MB ($percent_saved%)"
-        ((total_processed++))
-    else
-        log "ERROR" "Failed to optimize $f"
-        ((total_errors++))
+    elif [[ "$extension_lower" == "png" ]]; then
+        if "$IMAGEMAGICK" convert "$f" -quality "$IMAGE_QUALITY" "$temp_file" 2>> "$LOG_FILE"; then
+            mv "$temp_file" "$f"
+        else
+            log "ERROR" "Failed to optimize PNG: $f"
+            rm -f "$temp_file"
+            ((total_errors++))
+            continue
+        fi
     fi
+    
+    # Get new file size
+    new_size=$(du -h "$f" | cut -f1)
+    new_bytes=$(stat -f%z "$f")
+    
+    # Calculate space saved
+    space_saved=$((original_bytes - new_bytes))
+    if [ "$original_bytes" -gt 0 ]; then
+        space_saved_mb=$(echo "scale=2; $space_saved / 1048576" | bc)
+        percent_saved=$(echo "scale=2; ($space_saved * 100) / $original_bytes" | bc)
+    else
+        space_saved_mb="0.00"
+        percent_saved="0.00"
+    fi
+    
+    log "INFO" "Successfully optimized $f"
+    log "INFO" "Original size: $original_size"
+    log "INFO" "New size: $new_size"
+    log "INFO" "Space saved: ${space_saved_mb}MB ($percent_saved%)"
+    ((total_processed++))
 done
 
 # Print summary
